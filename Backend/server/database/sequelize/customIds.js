@@ -1,0 +1,30 @@
+'use strict';
+
+module.exports = {
+    customer1: '53ea558b-84cf-47e0-aa9e-d0b8f8c84f6c',
+    customer2: '32254830-da1c-4c89-a1da-3d4fbd6e79c2',
+    customer3: '80a97b86-0c54-4243-a7ca-fa8c2b2d59b5',
+    customer4: '3a2d26d4-b8df-4123-ac0d-543fca99a2ef',
+    seller1: '6693350d-d715-482a-af60-8960ca8e988e',
+    seller2: 'a9be1590-b92d-4a26-ba89-f5abed0082b4',
+    customerContact11: '2cf288ca-18a4-401a-b6a1-b0b76228b128',
+    customerContact12: 'f501f928-85ea-405c-aa7e-8d3affdd0048',
+    customerContact21: 'b5174a09-ceb1-4e7a-9f3f-6122580f32dd',
+    customerContact31: 'e0567b3c-baa4-4b27-b660-4799db8a8f1c',
+    customerContact32: '7ff8be46-0852-4dbb-ac90-83e174d37dff',
+    customerContact41: 'c8c97bf4-8861-4205-a4ab-3b89fe657f15',
+    pickupContact11: 'aa6c2658-a89a-48b8-9a4c-1e8d6f1d1586',
+    pickupContact21: 'eb42e74a-4f5c-41ff-872b-8e6fbf141e65',
+    pickupContact22: '831cdb39-b41e-4d4c-86ad-19e771c809f2',
+    item11: '5848e1d5-5708-4af8-b616-fe9e7a261c6f',
+    item12: '9d653cb1-0fe0-4c22-817c-686192b33388',
+    item21: '80d0a2b3-491c-408f-acfb-5efe8f200de6',
+    item22: '54a0ea8c-212e-46e8-ba77-81a2940ad2ca',
+    item23: 'b7e6a301-5e42-4963-80b0-fbe392de2688',
+    review11_22: '63be98df-a409-44e1-b265-5db4b6799ed3',
+    review21_22: 'ee2cc375-3265-4eb3-bf00-ba9c14e25446',
+    review41_12: '184ab1fc-6c64-4db0-9318-978eaec83639',
+    review42_23: '01794500-7b7d-42ce-9ccd-70d4aab9a0d4',
+    order1: '47e4b937-139a-4f0d-ac0c-6b754f287d08',
+    order2: '055c669c-32cf-43b2-bbc6-49011335ec8d'
+}

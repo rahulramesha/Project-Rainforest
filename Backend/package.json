@@ -1,0 +1,39 @@
+{
+  "name": "zon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest -i",
+    "start": "nodemon --inspect -r dotenv/config ./server/index.js dotenv_config_path=./dev.env"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "./server/testCommon/postTests.js"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^2.0.4",
+    "passport": "^0.4.1",
+    "pg": "^8.3.0",
+    "pg-hstore": "^2.3.3",
+    "redis": "^3.0.2",
+    "sequelize": "^6.3.4",
+    "sequelize-cli": "^6.2.0",
+    "serialize-javascript": "^5.0.1",
+    "short-uuid": "^3.1.1",
+    "uuid": "^8.3.0",
+    "validator": "^13.1.1"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2",
+    "supertest": "^4.0.2"
+  }
+}
