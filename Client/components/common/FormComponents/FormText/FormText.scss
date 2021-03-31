@@ -1,0 +1,51 @@
+@import '../../projectStyles.scss';
+
+.textFieldContainer {
+    width: 90%;
+    padding-top: 20rem;
+    max-width: 600rem;
+    margin: auto;
+
+    .inputField {
+        font-size: 16rem;
+        font-family: inherit;
+        color: $color-grey-dark-2;
+        padding: 1.5rem 2rem;
+        border-radius: 2px;
+        background-color: rgba($color-off-white, .5);
+        border: none;
+        border-bottom: 3px solid transparent;
+        display: block;
+        transition: all .3s;
+        width: 100%;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-grey-dark-2, .1);
+            border-bottom: 3px solid $color-primary-light;
+        }
+    }
+
+    .inputLabel {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+        font-size: 12rem;
+        font-weight: 700;
+        margin-left: 2rem;
+        margin-top: .7rem;
+        display: block;
+        transition: all .3s;
+
+        &.labelAppear {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    }
+
+    .errorMessages {
+        font-size: 12rem;
+        color: red;
+    }
+}

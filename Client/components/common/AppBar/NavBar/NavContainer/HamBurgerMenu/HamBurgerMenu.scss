@@ -1,0 +1,55 @@
+@import '../../../../projectStyles.scss';
+
+.hamburgerContainer {
+    display: block;
+    height: 100%;
+    width: $navBar-height;
+    position: relative;
+    background: transparent;
+    border: none;
+    padding: 10rem;
+    cursor: pointer;
+    text-align: left;
+
+    .hamburger {
+        position: absolute;
+        width: 30rem;
+        height: 2px;
+        background-color: $color-off-white;
+        top: 50%;
+        border-radius: 4px;
+        transform: translateY(0) rotate(0);
+        transition: transform 0.2s;
+
+        &:first-child {
+            transform: translateY(-10rem) rotate(0);
+        }
+
+        &:last-child {
+            transform: translateY(10rem) rotate(0);
+        }
+
+        &.close:first-child {
+            transform: translateY(0) rotate(45deg);
+        }
+
+        &.close:nth-child(2) {
+            opacity: 0;
+        }
+
+        &.close:last-child {
+            transform: translateY(0) rotate(-45deg);
+        }
+        
+    
+    }
+
+    &:hover {
+        background-color: $color-primary-light;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+}

@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: rainforest-ingress-nginx
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/use-regex: 'true'
+spec:
+  rules:
+    - host: localhost
+      http: 
+        paths:
+          - path: /api/?(.*)
+            backend:
+              serviceName: api-serv
+              servicePort: 3000
+          - path: /?(.*)
+            backend:
+              serviceName: client-serv
+              servicePort: 3000
+

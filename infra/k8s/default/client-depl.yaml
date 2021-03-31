@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: client
+  template:
+    metadata:
+      labels:
+        app: client
+    spec:
+      containers:
+        - name: client
+          image: rahulramesha/rainforest-client
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: PORT
+              value: '3000'
+            - name: NODE_ENV
+              valueFrom:
+                configMapKeyRef:
+                  name: env-config
+                  key: NODE_ENV
+            - name: STATIC_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: env-config
+                  key: STATIC_URL
+            - name: HOST_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: env-config
+                  key: HOST_NAME
+            #- name: TLS_CERT
+            #  valueFrom:
+            #    secretKeyRef:
+            #      name: tlssecret
+            #      key: tls.crt
+            #- name: TLS_KEY
+            #  valueFrom:
+            #    secretKeyRef:
+            #      name: tlssecret
+            #      key: tls.key
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: client-serv
+spec:
+  selector:
+    app: client
+  ports:
+    - name: client
+      protocol: TCP
+      port: 3000
+      targetPort: 3000

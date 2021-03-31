@@ -1,0 +1,9 @@
+@import '../../common/projectStyles.scss';
+
+.itemSalesContent {
+    padding: 10rem 20rem;
+
+    @include responsive(tablet_port) { 
+        order: 2;
+    }
+}

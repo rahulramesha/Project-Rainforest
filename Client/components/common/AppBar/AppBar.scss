@@ -1,0 +1,24 @@
+@import '../projectStyles.scss';
+
+.appBar {
+    display: flex;
+    flex-direction: column;
+    color: $color-off-white;
+
+    .bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+        align-items: center;
+        z-index: 1000;
+        background-color: $color-primary-dark;
+    }
+
+    .stickyStyles {
+        position: fixed;
+        top: 0;
+
+    }
+    
+}

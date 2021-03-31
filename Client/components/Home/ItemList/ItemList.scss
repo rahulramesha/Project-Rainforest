@@ -1,0 +1,10 @@
+@import '../../common/projectStyles.scss';
+
+.itemList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150rem, 300rem));
+    grid-auto-rows: 1fr;
+    grid-gap: 10rem;
+    justify-content: center;
+    padding: 20rem;
+}

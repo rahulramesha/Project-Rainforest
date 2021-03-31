@@ -1,0 +1,32 @@
+## Was not able to get this thing working with http2 backend without reverting to http1 from the loadbalncer. yet...
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+    name: rainforest-ingress-haproxy
+    annotations:
+      kubernetes.io/ingress.class: 'haproxy'
+      haproxy.org/ingress.class: 'haproxy'
+      haproxy.org/server-ssl: 'true'
+      haproxy.org/server-crt: 'default/tlssecret'
+      haproxy.org/server-ca: 'default/tlssecret'
+      haproxy.org/set-host: 'localhost'
+      haproxy.org/server-proto: 'h2'
+spec:
+  rules:
+    - host: localhost
+      http:
+        paths:
+        - path: /api
+          pathType: Prefix
+          backend:
+            service:
+              name: api-serv
+              port: 
+                number: 3000
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: client-serv
+              port: 
+                number: 3000

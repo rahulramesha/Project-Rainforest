@@ -1,0 +1,14 @@
+@import '../../projectStyles.scss';
+
+.slideOpen {
+    position: fixed;
+    top: 0;
+}
+
+.navContainer {
+    display: flex;
+    height: $navBar-height;
+    width: 100vw;
+    z-index: 1000;
+    
+}

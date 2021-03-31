@@ -1,3 +1,4 @@
-Backend/dev.env
-Backend/test.env
-Backend/node_modules/
+node_modules
+*.env
+Client/public
+Client/build

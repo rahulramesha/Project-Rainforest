@@ -1,0 +1,10 @@
+@import '../../projectStyles.scss';
+
+.message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to bottom , gold, orange);
+    color: $color-grey-dark-2;
+    height: 30rem;
+}

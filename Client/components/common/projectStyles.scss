@@ -1,0 +1,32 @@
+$color-primary-light: #0d3886;
+$color-primary-dark: #002366;
+
+$color-off-white: #fafafa;
+
+$color-grey-dark-2: #333;
+$color-grey-dark-1: #555;
+$color-grey-light-1: #777;
+$color-grey-light-2: #ddd;
+
+$shadow-color: rgba(0,0,0,0.6);
+
+
+
+$navBar-height: 50rem;
+
+$mobile: 37.5em; //600px
+$tablet-port: 56.25em; //900px
+$tablet-land: 75em; //1200px
+
+
+@mixin responsive($breakPoint) {
+    @if $breakPoint == mobile { 
+        @media only screen and (max-width: $mobile) {@content};
+    }
+    @if $breakPoint == tablet_port { 
+        @media only screen and (max-width: $tablet-port) {@content};
+    }
+    @if $breakPoint == tablet_land { 
+        @media only screen and (max-width: $tablet-land) {@content};
+    }
+}

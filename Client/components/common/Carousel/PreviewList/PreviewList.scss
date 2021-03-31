@@ -1,0 +1,41 @@
+@import '../../../common/projectStyles.scss';
+
+.previewListContainer {
+    width: fit-content;
+    float: left;
+
+    .previewIconList {
+        width: fit-content;
+        width: 120rem;
+        padding: 10rem 15rem;
+
+        .previewIconListItem {
+            display: block;
+            position: relative;
+            list-style: none;
+            width: 100%;
+            height: 0;
+            padding-top: 100%;
+            margin-bottom: 15rem;
+
+            .previewIcon {
+                position: absolute;
+                top: 0;
+                border-radius: 2px;
+                box-shadow: 0 1rem 6rem $shadow-color;
+                width: 100%;
+                transition: all 0.2s ease;
+
+                &.selected {
+                    transform: scale(1.1);
+                    box-shadow: 0 2rem 10rem $shadow-color;
+                }
+            }
+
+        }
+    }
+
+    @include responsive(mobile) { 
+        display: none;
+    }
+}

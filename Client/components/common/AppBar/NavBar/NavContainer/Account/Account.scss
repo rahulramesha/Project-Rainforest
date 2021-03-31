@@ -1,0 +1,27 @@
+@import '../../../../projectStyles.scss';
+
+.account{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    cursor: pointer;
+    
+    p {
+        text-decoration: underline;
+    }
+
+    @include responsive(tablet-land) {
+        width: 50rem;
+    }
+
+    @include responsive(mobile) {
+        display: none;
+    }
+}
+
+.popup {
+    background-color: $color-off-white;
+    border: 1px solid black;
+    color: black;
+    cursor: pointer;
+}

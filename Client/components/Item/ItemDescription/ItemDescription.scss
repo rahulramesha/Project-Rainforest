@@ -1,0 +1,22 @@
+@import '../../common/projectStyles.scss';
+
+.itemDescription {
+
+    p{
+        padding-top: 15rem;
+        padding-left: 15rem;
+        width: 90%;
+        text-indent: 40rem;
+    }
+
+    @include responsive(tablet_port) { 
+        order: 3;
+
+        p{  
+            font-size: 14rem;
+            padding-left: 0;
+            width: 100%;
+            text-indent: 40rem;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: env-config
+data:
+  NODE_ENV: 'development'
+  STATIC_URL: 'http://ingress-nginx-controller.ingress-nginx.svc.cluster.local'
+  HOST_NAME: 'localhost'

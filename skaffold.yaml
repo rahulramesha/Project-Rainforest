@@ -1,0 +1,30 @@
+apiVersion: skaffold/v2alpha3
+kind: Config
+deploy:
+  kubectl:
+    manifests:
+      - ./infra/k8s/dev/*
+      - ./infra/k8s/default/*
+      - ./infra/k8s/nginx/*
+build:
+  local:
+    push: false
+  artifacts:
+    - image: rahulramesha/rainforest-client
+      context: Client
+      docker:
+        dockerfile: Dockerfile.dev
+      sync:
+        manual:
+          - src: '**/*.js'
+            dest: .
+          - src: '**/*.scss'
+            dest: .
+    - image: rahulramesha/rainforest-api
+      context: API
+      docker:
+        dockerfile: Dockerfile.dev
+      sync:
+        manual:
+          - src: 'server/**/*.js'
+            dest: .

@@ -1,0 +1,26 @@
+@import '../common/projectStyles.scss';
+
+.item {
+    color: $color-grey-light-1;
+
+    .itemContainer {
+        display: flex;
+        padding: 20rem;
+        flex-direction: row;
+        
+        > * {
+            flex: 1 1 0;
+        }
+        
+        @include responsive(tablet_port) { 
+            flex-direction: column;
+        }
+
+        .itemContent {
+            display: flex;
+            flex-direction: column;
+            padding: 10rem;
+        }
+    }
+
+}

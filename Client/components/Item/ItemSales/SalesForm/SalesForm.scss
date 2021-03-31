@@ -1,0 +1,48 @@
+@import '../../../common/projectStyles.scss';
+
+.salesForm {
+    display: flex;
+    flex-direction: column;
+
+    @include responsive(tablet_port) { 
+        align-items: center;
+    }
+
+    label {
+        font-size: 25rem;
+        font-weight: 400;
+        color: $color-grey-dark-1;
+        padding: 10rem 20rem;
+    }
+
+    input[type=submit] {
+        font-size: 18rem;
+        font-weight: 400;
+        color: $color-grey-dark-2;
+        padding: 12rem 70rem;
+        width: fit-content;
+        background-image: linear-gradient(to right bottom, gold, orange);
+        border-radius: 3rem;
+        border: 0;
+        box-shadow: 0 3rem 5rem $shadow-color;
+        transform: translateY(0);
+        transition: all 0.2s;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:hover {
+            box-shadow: 0 6rem 10rem $shadow-color;
+            transform: translateY(2px) scale(1.05);
+        }
+
+        &:active {
+            box-shadow: 0 2rem 5rem $shadow-color;
+            transform: translateY(-1px) scale(0.99);
+            background-image: linear-gradient(to right, gold, gold);;
+        }
+    }
+
+
+}

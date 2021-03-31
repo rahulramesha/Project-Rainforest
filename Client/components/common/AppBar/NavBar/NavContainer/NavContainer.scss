@@ -1,0 +1,84 @@
+@import '../../../projectStyles.scss';
+
+.navs {
+    position: relative;
+    display: block;
+    width: 100%;
+    
+    ol {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        text-align: center;
+        grid-template-columns: [brand-start] max-content [brand-end] repeat(2, minmax(min-content, 90rem)) [search-start] 1fr [search-end] max-content [cart-start] 70rem [cart-end];
+        grid-template-rows: $navBar-height;
+        overflow-wrap: break-word;
+
+        @include responsive(mobile) {
+            grid-template-columns: [search-start hamburger-start] $navBar-height [hamburger-end brand-start] max-content [brand-end miniSearch-start] 1fr [miniSearch-end cart-start] 60rem [cart-end search-end];
+            grid-template-rows: $navBar-height $navBar-height;
+        }
+
+        li {
+            list-style: none;
+        }
+    
+        a,
+        a:link,
+        a:visited {
+            display: flex;
+            color: $color-off-white;
+            text-decoration: none;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hamBurgerMenuContainer {
+            display: none;
+            width: 100%;
+            height: 100%;
+            grid-column: hamburger-start / hamburger-end;
+            grid-row: 1 / 2;
+
+            @include responsive(mobile) {
+                display: block;
+            }
+
+        }
+
+        .brandContainer {
+            grid-column: brand-start / brand-end;
+            grid-row: 1 / 2;
+        }
+
+        .navLink {
+            transition: background-color 0.2s;
+            grid-row: 1 / 2;
+
+            @include responsive(mobile) {
+                display: none;
+            }
+    
+            &:hover {
+                background-color: orange;
+            }
+        }
+        
+        .linkCart {
+            margin-left: auto;
+            transition: background-color 0.2s;
+            grid-column: cart-start / cart-end;
+            grid-row: 1 / 2;
+
+            &:hover {
+                background-color: $color-primary-light;
+            }
+        }
+        
+    }
+
+    
+
+}

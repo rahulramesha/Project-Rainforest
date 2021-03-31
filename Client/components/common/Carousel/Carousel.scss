@@ -1,0 +1,26 @@
+@import '../projectStyles.scss';
+
+.carouselContainer{
+    display: flex;
+    align-items: center;
+
+    .arrows {
+        display: none;
+        background-color: transparent;
+        border: none;
+        align-self: stretch;
+        width: 30rem;
+
+        &:focus {
+            outline: none;
+        }
+
+        .arrowIcon {
+            fill: $color-grey-dark-2;
+        }
+
+        @include responsive(mobile) { 
+            display: block;
+        }
+    }
+}

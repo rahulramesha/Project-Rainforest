@@ -1,0 +1,164 @@
+@import '../../../../projectStyles.scss';
+
+.searchBarListContainer {
+    display: flex;
+    height: 100%;
+    padding: 7rem;
+    flex: 1;
+    justify-content: center;
+    grid-column: search-start / search-end;
+    grid-row: 1 / 2;
+
+    @include responsive(mobile) {
+        grid-column: miniSearch-start / miniSearch-end;
+
+        &.searchBarListContainerMobile {
+            width: 100vw;
+            background-color: $color-primary-dark;
+            grid-column: search-start / search-end;
+            grid-row: 2 / 3;
+        }
+    }
+
+
+    .searchBar {
+        background-color: $color-off-white;
+        display: flex;
+        position: relative;
+        border-radius: 3px;
+        align-items: center;
+        height: 100%;
+        width: 500rem;
+        transition: width 0.2s;
+        
+        &:focus-within {
+            width: 600rem;
+        }
+
+        @include responsive(tablet_land) {
+            width: 80%;
+
+            &:focus-within {
+                width: 100%;
+            }
+        }
+
+
+
+        @include responsive(mobile) {
+            display: flex;
+            width: 90%;
+
+            &:focus-within {
+                width: 95%;
+            }
+
+            &.searchBarOnMobile {
+                display: none;
+            }
+        }
+
+
+        .searchText {
+            height: 100%;
+            width: 100%;
+            padding: 0 10rem;
+            background-color: $color-off-white;
+            border: none;
+            border-radius: 3px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .searchSuggetions {
+            position: absolute;
+            width: 100%;
+            top: 100%;
+            left: 0;
+            padding: 3rem 10rem;
+            border: 1px solid $color-grey-dark-1;
+            color: $color-grey-dark-1;
+            background-color: $color-off-white;
+            border-radius: 3px;
+            text-align: left;
+        }
+
+        .searchIconButton {
+            height: 100%;
+            border-radius: 3px;
+            text-align: center;
+            border: none;
+            overflow: hidden;
+
+            @include responsive(mobile) {
+                display: none;
+            }
+
+            .searchIcon {
+                height: 100%;
+                background-image: linear-gradient( to right bottom, gold, orange );
+                padding: 0 5rem;
+            }
+
+
+            
+        }
+
+        .searchCloseButton {
+            display: none;
+            position: relative;
+            height: 100%;
+            width: $navBar-height;
+            padding: 4rem;
+            background-color: $color-off-white;
+            border: none;
+            text-align: left;
+
+            @include responsive(mobile) {
+                display: block;
+            }
+
+            span {
+                position: absolute;
+                width: 80%;
+                height: 1px;
+                background-color: $color-grey-dark-1;
+                top: 50%;
+            }
+
+            span:first-child {
+                transform: rotate(45deg);
+            }
+
+            span:last-child {
+                transform: rotate(135deg);
+            }
+        }
+    }
+
+    .searchIconButtonMobile {
+        display: none;
+        height: 100%;
+        background-color: transparent;
+        border: none;
+        width: fit-content;
+        margin-left: auto;
+        cursor: pointer;
+
+        @include responsive(mobile) {
+            display: block;
+
+            &.searchButtonOnMobile {
+                display: none;
+            }
+        }
+
+        .searchIconMobile {
+            height: 100%;
+            fill: $color-off-white;
+            background-color: transparent;
+        }
+    }
+}

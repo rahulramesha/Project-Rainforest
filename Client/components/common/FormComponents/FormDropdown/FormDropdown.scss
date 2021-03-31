@@ -1,0 +1,25 @@
+@import '../../projectStyles.scss';
+
+.dropDownContainer {
+    width: 90%;
+    max-width: 600rem;
+    padding-top: 20rem;
+    margin: auto;
+
+    label {
+        padding-right: 20rem;
+    }
+
+    select {
+        color: $color-grey-dark-1;
+        padding: 8rem 12rem;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 1rem 2rem rgba($color-grey-dark-2, .1);
+        border-bottom: 3px solid $color-primary-light;
+
+        :focus {
+            border-bottom: 3px solid transparent;
+        }
+    }
+}
